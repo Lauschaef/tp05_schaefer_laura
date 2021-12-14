@@ -1,0 +1,19 @@
+<h2>Panier</h2>
+<div class="divider"></div>
+
+<div class="container mb-3">
+    <ul class="list-group" style="background-color: white">
+        <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let book of liste$ | async">
+            <img src='{{ book.image }}'>
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">{{ book.title }}</div>
+                {{ book.author }}
+            </div>
+            <span class="badge bg-primary rounded-pill">{{ (book.price)?.toFixed(2) }} €</span>
+            <div style="margin-left: 20px">
+                <button (click)="deleteBookOfShoppingCart(book)" class="btn btn-orange" type="button"><i class="bi bi-cart-dash"></i></button>
+            </div>
+        </li>
+    </ul>
+    <p>Total : {{(total$ | async)?.toFixed(2)}} €</p>
+</div>

@@ -1,0 +1,7 @@
+/vendor
+/assets
+.htaccess
+*.js
+bootstrap-icons.*
+favicon.ico
+*.css

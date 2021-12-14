@@ -1,0 +1,23 @@
+<h2>Compte client</h2>
+<div class="divider"></div>
+
+<div class="container mb-3" style="text-align: center; width: 30%;">
+
+<form [formGroup]="connectForm" (ngSubmit)="onSubmit()">
+		
+        <div class="form-floating">
+            <input type="text" class="form-control" id="login" formControlName="login">
+            <label for="login">Identifiant</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="password" formControlName="password">
+            <label for="password">Mot de passe</label>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-orange">Se connecter</button>
+        </div>       
+
+</form>
+
+</div>
